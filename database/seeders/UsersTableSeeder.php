@@ -18,7 +18,8 @@ class UsersTableSeeder extends Seeder
     {
         $faker = Faker::create('id_ID');
         $user = User::updateOrCreate([
-            'nim' => '11112222',
+            'nim' => '11112222'
+        ], [
             'nama' => $faker->name,
             'email' => '11112222@mail.unej.ac.id',
             'password' => bcrypt('password'),
@@ -28,7 +29,8 @@ class UsersTableSeeder extends Seeder
         $user->assignRole('Superadmin');
 
         $user = User::updateOrCreate([
-            'nim' => '33334444',
+            'nim' => '33334444'
+        ], [
             'nama' => $faker->name,
             'email' => '33334444@mail.unej.ac.id',
             'password' => bcrypt('password'),
@@ -38,7 +40,8 @@ class UsersTableSeeder extends Seeder
         $user->assignRole('Admin');
 
         $user = User::updateOrCreate([
-            'nim' => '55556666',
+            'nim' => '55556666'
+        ], [
             'nama' => $faker->name,
             'email' => '55556666@mail.unej.ac.id',
             'password' => bcrypt('password'),
